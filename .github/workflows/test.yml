@@ -24,12 +24,19 @@ jobs:
 
     - name: Ensure Docker Compose is available
       run: docker compose version
+    
+    # Install dependencies
+    - name: Install dependencies
+      run: npm install
 
     - name: Copy .env.example to .env
       run: cp .env.example .env
     
     - name: Make integration script executable
       run: chmod +x ./scripts/run-integration.sh
+    
+    - name: Make wait-for-it.sh executable
+      run: chmod +x ./scripts/wait-for-it.sh
 
     - name: Run integration script
       run: npm run test:integration
