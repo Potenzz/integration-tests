@@ -37,6 +37,11 @@ jobs:
     
     - name: Make wait-for-it.sh executable
       run: chmod +x ./scripts/wait-for-it.sh
+    
+    - name: Verify DATABASE_URL environment variable
+      run: echo $DATABASE_URL
+      env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
     - name: Run integration script
       run: npm run test:integration
