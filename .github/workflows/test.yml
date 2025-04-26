@@ -32,6 +32,12 @@ jobs:
     - name: Copy .env.example to .env
       run: cp .env.example .env
     
+    - name: Load environment variables
+      run: |
+        set -a
+        source .env
+        set +a
+    
     - name: Make integration script executable
       run: chmod +x ./scripts/run-integration.sh
     
@@ -40,8 +46,6 @@ jobs:
     
     - name: Verify DATABASE_URL environment variable
       run: echo $DATABASE_URL
-      env:
-        DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
     - name: Run integration script
       run: npm run test:integration
