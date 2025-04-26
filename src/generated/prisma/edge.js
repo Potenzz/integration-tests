@@ -120,7 +120,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "E:\\MERN LEARNING\\Learning\\W25 - Integration and EndToEnd Testing\\1-integ-tests\\src\\generated\\prisma",
+      "value": "C:\\Users\\Administrator\\Desktop\\integration-tests\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -134,7 +134,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "E:\\MERN LEARNING\\Learning\\W25 - Integration and EndToEnd Testing\\1-integ-tests\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\Administrator\\Desktop\\integration-tests\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {

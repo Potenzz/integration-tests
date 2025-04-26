@@ -25,7 +25,6 @@ jobs:
     - name: Ensure Docker Compose is available
       run: docker compose version
     
-    # Install dependencies
     - name: Install dependencies
       run: npm install
 
