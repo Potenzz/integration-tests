@@ -28,20 +28,11 @@ jobs:
     - name: Copy .env.example to .env
       run: cp .env.example .env
     
-    - name: Load environment variables
-      run: |
-        set -a
-        source .env
-        set +a
-    
     - name: Make integration script executable
       run: chmod +x ./scripts/run-integration.sh
     
     - name: Make wait-for-it.sh executable
       run: chmod +x ./scripts/wait-for-it.sh
     
-    - name: Verify DATABASE_URL environment variable
-      run: echo $DATABASE_URL
-
     - name: Run integration script
       run: npm run test:integration
